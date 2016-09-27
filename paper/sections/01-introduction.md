@@ -43,14 +43,15 @@ To convert the essay (written in markdown) into HTML file, we can simply type
 ###**Git**
 ![](https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/git-logo.png)
   
-   Most of the times when you write an essay you can't finish it in one sitting or need to revise many times, so you save unfinished documents as drafts into a folder. This is similar to git’s functionality. Git is a distributed version control system that allows you to keep a record of file changes over time, so specific versions can be recalled later. Let’s see how git contributes in producing the final version of essay that you are reading. 
+  Most of the times when you write an essay you can't finish it in one sitting or need to revise many times, so you save unfinished documents as drafts into a folder. This is similar to git’s functionality. Git is a distributed version control system that allows you to keep a record of file changes over time, so specific versions can be recalled later. Let’s see how git contributes in producing the final version of essay that you are reading. 
     
   When using git for the first time, we need to configure a few things. In the command line, type `git config --global user.name "your name"  user.email "your email address"`. The username and email will be associated with your subsequent Git activity. Next we need to set up the directory and repository for the essay.  
-First type `mkdir project_name` to create your big project directory. Then  type `mkdir paper` to create the paper directory, then `cd paper` to change into that directory. The essay itself consists of four separate parts, so we set up another directory `mkdir sections` and `cd` to it. You can open and edit a file using your preferred text editor. I chose vi editor, so 
- 
- 
- 
-   ` 
+    
+Use `mkdir` and `cd` commands to make and change into that directory, respectively. We want to have a paper and images directories inside the big project directory called "project1". To do that, type `mkdir project1`.  Next to create paper and image directories, type `cd project1`->`mkdir paper`->`mkdir images` in your command line. This is where git comes into play, type `git init` to initialize an empty git repository. This tells git to keep track of subsequent changes that we make to the project1 directories. 
+
+Next we want to use git to record changes made in the files. For convenience, only introduction part of the essay is discussed. In the paper directory, make a directory `mkdir sections` then `cd` into it. To open and edit a file, you could choose your preferred editor such as emacs or vi (I used nano in this case).  So `nano introduction.md` will create a markdown file called introduction. After done editing the file, you should tell git to keep track of your files. Simply type `git add introduction.md`. This is similar to saying that you now have introduction.md version 1. You also want to record what the changes are, which are called _commit_. Use `git commit -m your message` to summarize the changes you make to the file.  Finally, to have a general view of the project status, type `git status` to see if you have any untracked files or changes that you haven't commited yet.
+
+Notice that each time we make revisions to the introduction.md file, we need to repeat the command `git add introduction.md` and `git commit -m message` to record the changes. Finally, use `git log` to see a history of  commit logs. Combined with `add`  `commit` and  `log` command,  I can easily retrieve older version of my introduction draft and it's easier for other people to follow my workflow and possibly reproduce my work. 
 
 ###**GitHub**
 ![](https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/github-logo.png)
