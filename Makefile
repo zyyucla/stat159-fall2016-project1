@@ -1,3 +1,17 @@
-paper.html:paper/sections/00-abstract.md paper/sections/01-introduction.md paper/sections/02-discussion.md paper/sections/03-conclusion.md
-	pandoc *.md -s -o paper.html
+ #phony targets
+
+.PHONY:clean all
+
+#all
+all: paper.md paper.html
+
+paper.md:/paper/sections/*.md
+	pandoc /paper/sections/*.md -s -o paper.md
+
+paper.html:paper.md
+	pandoc paper.md -s -o paper.html
+
+#clean
+ clean:
+	rm -f paper.md paper.html
 
