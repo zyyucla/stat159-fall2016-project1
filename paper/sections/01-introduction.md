@@ -6,8 +6,7 @@
    Working on any project requires following a certain workflow to achieve goals. The process of writing this essay is very similar to finishing a project: through planning schemes and software, this essay aims to introduce some computational tools used in writing the essay and how each tool contribute to its overall workflow.
 	 
 ####**Markdown**
-![](https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/markdown-logo.png)
-
+![](../images/markdown-logo.png)
  Every big project starts with the smallest component, so let's first talk about the "pencil" used in writing the essay--Markdown.
 	  
    Markdown is a lightweight markup language with plain text formatting syntax so that it can be converted into HTML or any other formats. Readability is in its core philosophy as the language intends to be easy-to-read and easy-to-write. 
@@ -25,7 +24,7 @@ Lastly, to demonstrate code/syntax highlighting, inline code has backticks `` ` 
 
 
 ###**Pandoc**
-![](https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/pandoc-logo.png)
+![](../images/pandoc-logo.png)
    
   As the logo suggests, Pandoc is a software tool to convert documents between formats, usually from a markup one to another. I would like to think of Pandoc as "dictionary" in writing the essay in that they both translate from one language to another.  
 
@@ -41,7 +40,7 @@ To convert the essay (written in markdown) into HTML file, we can simply type
   
 
 ###**Git**
-![](https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/git-logo.png)
+![](../images/git-logo.png)
   
   Most of the times when you write an essay you can't finish it in one sitting or need to revise many times, so you save unfinished documents as drafts into a folder. This is similar to git’s functionality. Git is a distributed version control system that allows you to keep a record of file changes over time, so specific versions can be recalled later. Let’s see how git contributes in producing the final version of essay that you are reading. 
     
@@ -57,7 +56,7 @@ Notice that each time we make revisions to the introduction.md file, we need to 
 
 
 ###**GitHub**
-![](https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/github-logo.png)
+![](../images/github-logo.png)
 
 Suppose you finish writing the essay and want to publish it online for a wider audience or simply want to collaborate with others, then having an online central remote hub connected to your local repository is a good idea . GitHub is a web-based Git repository hosting service and it's the general way of sharing your changes with others on the web. 
 
