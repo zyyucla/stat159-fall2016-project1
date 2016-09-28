@@ -53,9 +53,17 @@ Next we want to use git to record changes made in the files. For convenience, on
 
 Notice that each time we make revisions to the introduction.md file, we need to repeat the command `git add introduction.md` and `git commit -m message` to record the changes. Finally, use `git log` to see a history of  commit logs. Combined with `add`  `commit` and  `log` command,  I can easily retrieve older version of my introduction draft and it's easier for other people to follow my workflow and possibly reproduce my work. 
 
+ Last but not the least, sometimes you don't want certain files to be tracked by git, then simply create a file called **.gitignore** and include the extension names that you don't want to track (i.e _docx_, _md_).
+
+
 ###**GitHub**
 ![](https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/github-logo.png)
 
-Suppose you finish writing the essay and want to publish it online for a wider audience or just source sharing, then GitHub is a good choice. GitHub is a web-based Git repository hosting service.  
+Suppose you finish writing the essay and want to publish it online for a wider audience or simply want to collaborate with others, then having an online central remote hub connected to your local repository is a good idea . GitHub is a web-based Git repository hosting service and it's the general way of sharing your changes with others on the web. 
 
+To start with GitHub, go to the [website](https://github.com/) and create an account and a repository. To connect local repository (the one we created in **Git** section called _project1_) with GitHub, we run this command:
+  `git remote add origin https://github.com/zyyucla/project1.git ` 
+where _zyyucla_ is my GitHub username and _project1_ is the repository name I created on GitHub. The name _origin_ is a local nickname for the remote repository. 
+
+Once the two repositories are connected and synchronized, type `git push origin master`, which will push the changes from local repository to the one on GitHub. Reversely, command `git pull origin master` will pull changes from remote repository to local one. When writing this essay, I made commits and push the changes to GitHub regularly, which is essential in working on this project as it allows for better source code management and public peer review(though it's an individual project, it never hurts to get feedback from other people!). 
 
