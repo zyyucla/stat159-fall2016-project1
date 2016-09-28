@@ -2,8 +2,9 @@
 
 #Stat 159-Individual Project Essay
 
-Image here:
+
     ![](https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/stat159-logo.png)
+    
  
 
 ----------
