@@ -1,10 +1,8 @@
 
 
 #Stat 159-Individual Project Essay
-
-
-    ![](https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/stat159-logo.png)
-    
+ ![](https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/stat159-logo.png)
+ ![](../images/stat159-logo.png)   
  
 
 ----------
