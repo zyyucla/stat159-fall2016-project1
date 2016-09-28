@@ -6,7 +6,7 @@
 all: paper.md paper.html
 
 paper.md:/paper/sections/*.md
-	pandoc /paper/sections/*.md -s -o paper.md
+	pandoc /paper/sections/*.md -s -o paper/ paper.md
 
 paper.html:paper.md
 	pandoc paper.md -s -o paper.html
