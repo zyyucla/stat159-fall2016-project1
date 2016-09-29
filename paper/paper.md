@@ -33,9 +33,10 @@ each tool contribute to its overall workflow.
 
 #### **Markdown**
 
-![](../images/markdown-logo.png) Every big project starts with the
-smallest component, so let's first talk about the "pencil" used in
-writing the essay--Markdown.
+![](../images/markdown-logo.png)
+
+Every big project starts with the smallest component, so let's first
+talk about the "pencil" used in writing the essay--Markdown.
 
 Markdown is a lightweight markup language with plain text formatting
 syntax so that it can be converted into HTML or any other formats.
@@ -45,21 +46,23 @@ easy-to-read and easy-to-write.
 Let's take the essay for example. The title "introduction" and current
 section "Markdown" is written in different header size, which is
 indicated by the number of "\#" in front of it. In markdown editor, we
-write it as: `###Introduction      ####Markdown` which gives us a h3
-header size for introduction and h4 header size for Markdown title.
-Notice that Markdown title is also in bold. To do that, we simply write
+write it as: `###Introduction  ####Markdown` which gives us a h3 header
+size for introduction and h4 header size for Markdown title. Notice that
+Markdown title is also in bold. To do that, we simply write
 `###**Markdown**` where asterisk is used to indicate emphasis.
 
 Next we want to incorporate the Markdown-logo image into the text. The
 syntax is `![alt text](url)`. `[alt text]` is displayed when the image
 url is not valid. To have the same effect as what you are seeing in the
 essay, try to type
-`![markdown-logo] url(https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/markdown-logo.png)`
+
+    ![markdown-logo] url(https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/markdown-logo.png)
+
 in the text editor and see for yourself.
 
 Lastly, to demonstrate code/syntax highlighting, inline code has
-backticks \`\` \` around it and for blocks of code, use three backticks.
-This section only covers a very small amount of markdown syntax. For a
+backticks around it and for blocks of code, use three backticks. This
+section only covers a very small amount of markdown syntax. For a
 complete reference, follow the link [Markdown
 Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
 and try it yourself.
@@ -89,6 +92,29 @@ in **Makefile** section. Check out
 [Pandoc](http://pandoc.org/getting-started.html) to learn more.
 
 ### **Makefile**
+
+Make is a build automation tool that automatically builds executable
+program from source code by reading files call *Makefile* that specifies
+how to derive the target program. To put it simply, Makefile is
+analogous to a translator when you want to translate your essay from
+English to Spanish.
+
+Converting the essay from markdown to html requires two steps. First
+step is to concatenate all separate .md files into one single file. We
+first use the name **all** to indicate multiple target files
+`all: paper.md paper.html`. Then type
+`paper.md:paper/sections/*.md     pandoc paper/sections/*.md -s -o paper/paper.md`
+to concatenate all md files. Here \*.md is a wildcard indicating all
+files with md extension in the sections directory.
+
+Next step is to convert paper.md into paper.html. As mentioned in the
+**Pandoc** section, command
+`pandoc paper/paper.md -s -o paper/paper.html` would suffice. The
+`.PHONY` command is simply a convenient label to indicate a series of
+target files. Meanwhile, the `clean` target is commonly used to remove
+output files typically generated after some compilation process. Include
+`phony` and `clean` targets as follows:
+`.PHONY: all clean     clean:       rm -f paper/paper.md paper/paper.html`
 
 ### **Git**
 
