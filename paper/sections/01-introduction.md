@@ -40,7 +40,19 @@ To convert the essay (written in markdown) into HTML file, we can simply type
 
 
 ###**Makefile**
+
+ Make is a build automation tool that automatically builds executable program from source code by reading files call _Makefile_ that specifies how to derive the target program. To put it simply, Makefile is analogous to a translator when you want to translate your essay from English to Spanish.  
+ 
+ Converting the essay from markdown to html requires two steps. First step is to concatenate all separate .md files into one single file. We first use the name **all** to indicate multiple target files `all: paper.md paper.html`.  Then type ```paper.md:paper/sections/*.md
+	pandoc paper/sections/*.md -s -o paper/paper.md```
+
+to concatenate all md files. Here *.md is a wildcard indicating all files with md extension in the sections directory.
   
+ Next step is to convert paper.md into paper.html. As mentioned in the **Pandoc** section, command `pandoc paper/paper.md -s -o paper/paper.html` would suffice. The `.PHONY` command is simply a convenient label to indicate a series of target files. Meanwhile, the `clean` target is commonly used to remove output files typically generated after some compilation process. Include `phony` and `clean` targets as follows:
+ ``` .PHONY: all clean
+     clean:
+      rm -f paper/paper.md paper/paper.html
+``` 
 
 ###**Git**
 ![](../images/git-logo.png)
