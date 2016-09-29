@@ -2,7 +2,7 @@
 
 ###stat159-fall2016-project1
 <hr>
-This repository holds the materials for individual project. The paper.md file is a tutorial on how to use several software tools (ie. makrdown, pandoc, Make, git/github) to follow workflow and reproduce the paper. _Paper_ folder contains separate sections of the essay and _Images_folder contain images used in the paper
+This repository holds the materials for individual project. The paper.md file is a tutorial on how to use several software tools (ie. makrdown, pandoc, Make, git/github) to follow workflow and reproduce the paper. _paper_ folder contains separate sections of the essay and _images_ folder contain images used in the paper
 
 
 ![Creative Common License](https://i.creativecommons.org/l/by/4.0/88x31.png)
